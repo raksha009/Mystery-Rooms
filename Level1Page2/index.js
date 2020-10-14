@@ -1,6 +1,6 @@
 
 var flag = 0;
-var timeLeft = 35;
+var timeLeft = 60;
     var elem = document.getElementById('timer');
     
     var timerId = setInterval(countdown, 1000);
