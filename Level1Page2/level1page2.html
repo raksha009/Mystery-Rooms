@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mystery Rooms</title>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Athiti:300,400'>
+
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+	<link rel="shortcut icon" href="https://www.innerve-igdtuw.com/innerve_logo.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "page2.css" type = "text/css">
+</head>
+<body>
+
+  <div class="containerr">
+	<div class="front side">
+		<div class="content">
+			<h1>LEVEL 1</h1>
+			<p style = "font-size: 30px;">What was the name Harry adopted for Bill and Flourish wedding?
+			</p>
+            <br>
+            <p> NOTE: Answer this question correctly to get hint to the next coding question.
+            	<br>
+            Hover over to enter your answer!</p>
+		</div>
+	</div>
+	<div class="back side">
+		<div class="content">
+            <span id = "timer" > </span>
+			<h1 style="text-shadow: 4px 3px black;">Enter your answer</h1>
+			<form>
+
+				<input type="text" name = "answer" id = "answer1" placeholder="Enter here" style="margin-left: 100px; color: white; text-shadow: 2px 3px black; font-size: 20px;">
+
+<!--				<input type="submit"  onclick= "validate1()" value="SUBMIT" style="font-size: 25px; text-shadow: 4px 3px black; font-family: 'Noto Serif', serif;">-->
+                
+			</form>
+            
+            <button onclick="validate1()" type = "button" class="btn btn-outline-light" style="padding-top: -50px; margin-top: -40px; font-size: 30px">SUBMIT</button>
+            
+		</div>
+	</div>
+  </div>
+    
+    
+    
+    
+	<div id = "potter-animation"></div>
+                    
+<!--                    ------- POP UP ------->
+<div class="popup-correct" id="correct">
+     <h2>Bravo! Correct Answer:)</h2>
+     <p><strong>CLUE:</strong> Beware of all corner cases. 
+         <br> Tip: It's an easy problem.
+    <br>Click the below link to get redirected to the coding question.</p>
+     <a class = "btn btn-success" role = "button" href="https://www.hackerrank.com/sd1597327837">Click here</a>
+</div>
+    
+    
+ <div class="popup-wrong" id="wrong">
+     <h2>Incorrect Answer!</h2>
+     <p>Sorry, we won't be able to provide you a clue.<br>
+         Click the below link to get redirected to the coding question.</p> 
+     <a class = "btn btn-danger" role = "button" href="https://www.hackerrank.com/sd1597327837" style="font-size:1rem; color: aliceblue;">Click here</a>
+ </div>
+ <div class="popup-time" id="time">
+     <h2>Time's up!</h2>
+     <p>Oops, you ran out of time!<br>
+         Click the below link to get redirected to the coding question.</p> 
+     <a class = "btn btn-warning" role = "button" href="https://www.hackerrank.com/sd1597327837">Click here</a>
+ </div>
+
+<!--    ------------------------------>
+    
+    
+    <script src="index.js"> </script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.7.1/bodymovin.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+<script type="text/javascript">
+	var spellAnimation = bodymovin.loadAnimation({
+  container: document.getElementById('potter-animation'),
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'https://raw.githubusercontent.com/abrahamrkj/facebook-spell/master/data.json'
+})
+
+$(document).ready(function(){
+  spellAnimation.play();
+})
+</script>
+    
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+</body>
+</html>
